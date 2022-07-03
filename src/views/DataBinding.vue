@@ -2,6 +2,8 @@
   <div>
   <h2><mark>문자열 데이터 바인딩</mark></h2>
   <h3>Hello, {{ title }}</h3>
+  <h3>{{ title.split('') }}</h3>
+  <!-- 콧수염 안에는 단순히 데이터 이름만 들어가는 것이 아니라 자바스크립트 표현식도 이용할 수 있다. -->
   <p>중괄호 두개를 이용해서 데이터 삽입</p>
   </div>
   <div>
@@ -35,7 +37,7 @@
 export default {
   data() {
     return {
-      title: 'World',
+      title: 'Hello World !!!',
       htmlstring: '<p style="color:red;"> This is a red string.</p>',
       valueModel: 'South Korea',
       numberModel:3,
