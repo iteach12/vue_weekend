@@ -1,18 +1,15 @@
 <template>
   <div class="home">
-    <h3>컴포넌트 구조</h3>
+    <h3>VUE 연습</h3>
+    <hr>
+    <h4>안녕하세요. 제 이름은 {{myname}}입니다.</h4>
+    <input type="text" v-model="myname">
+    <p v-if="myname != 0"
+    >0이 아닙니다. 다시 입력하세요.</p>
+    <p v-else-if="myname == 0">0이 맞습니다.</p>
     <hr />
-    <ul>
-      <li>template : view에 해당하는 html 코드를 작성하는 영역</li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
+    <h1 :class="{bigname:(myname != 0), smallname:(myname == 0)}">클래스 연습입니다.</h1>
+    
   </div>
 </template>
 
@@ -21,5 +18,25 @@
 
 export default {
   name: 'HomeView',
+  data() {
+    return {
+      myname:'박상준',
+    }
+    
+  },
 };
 </script>
+<style>
+h3{
+  font-size: xx-large;
+  color:blueviolet;
+}
+.bigname{
+  font-size: xx-large;
+  color: aqua;
+}
+.smallname{
+  font-size: smaller;
+  color: yellow;
+}
+</style>
