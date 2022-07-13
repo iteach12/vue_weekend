@@ -8,7 +8,7 @@
     >0이 아닙니다. 다시 입력하세요.</p>
     <p v-else-if="myname == 0">0이 맞습니다.</p>
     <hr />
-    <h1 :class="{bigname:(myname != 0), smallname:(myname == 0)}">클래스 연습입니다.</h1>
+    <h1 :class="{bigname:(myname != 0), smallname:(myname == 0)}" class="bg-red-400">클래스 연습입니다.</h1>
   </div>
   <table>
     <thead>
@@ -30,8 +30,8 @@
         </td>
         <td>
           <input type="text" v-model="myAnswer">
-          <p v-if="guguAnswer == myAnswer">정답입니다.</p>
-          <p v-else>틀렸습니다.</p>
+          <p v-if="guguAnswer == myAnswer" class="bg-red-300">정답입니다.</p>
+          <p v-else class="bg-blue-300">틀렸습니다.</p>
           </td>
       </tr>
       <tr>
