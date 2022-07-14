@@ -1,15 +1,21 @@
 <template>
   <div>
     <PageTitle :title="myTestTitle" />
+    <ImageCard />
   </div>
 </template>
 <script>
 import PageTitle from '../components/PageTitle';
+import ImageCard from '../components/ImageCard';
 export default {
-  components: { PageTitle },
+  components: { PageTitle, ImageCard },
   data() {
     return {
       myTestTitle: '제 이름은 박상준입니다. VUE를 배우고 있지요.',
+      numTest: 37,
+      // booleanTest: false,
+      // arrayTest: [7, 8, 9],
+      // objectTest: { name: 'Jaden', age: 6 },
     };
   },
 };
