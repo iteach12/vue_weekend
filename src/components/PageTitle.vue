@@ -18,6 +18,7 @@ export default {
     },
     booleantest: {
       type: Boolean,
+      default: true,
     },
     objecttest: {
       type: Object,

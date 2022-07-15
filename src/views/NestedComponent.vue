@@ -6,6 +6,7 @@
       :booleantest="booleanTest"
       :objecttest="objectTest"
     />
+
     <ImageCard />
   </div>
 </template>
