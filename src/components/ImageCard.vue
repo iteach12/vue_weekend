@@ -1,4 +1,15 @@
 <template>
+  <div>
+    <h2 v-if="userSelect != ''">{{ selectedOptions }}가 선택되었습니다.</h2>
+    <h2 v-else>아래의 옵션을 선택해 주세요.</h2>
+    <select v-model="selectedOptions" @change="changeSelect">
+      <option value="seoul">서울</option>
+      <option value="jeju">제주</option>
+      <option value="busan">부산</option>
+      <option value="yongin">용인</option>
+      <option value="wonju">원주</option>
+    </select>
+  </div>
   <table class="mg">
     <thead>
       <tr>
@@ -33,7 +44,14 @@ export default {
         { name: 'Popo', age: 34, hobby: 'Watching movies' },
         { name: 'Yolk', age: 20, hobby: 'Sleep' },
       ],
+      selectedOptions: '',
+      userSelect: '',
     };
+  },
+  methods: {
+    changeSelect() {
+      this.userSelect = this.selectedOptions;
+    },
   },
 };
 </script>

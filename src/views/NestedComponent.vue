@@ -1,6 +1,11 @@
 <template>
   <div>
-    <PageTitle :title="myTestTitle" />
+    <PageTitle
+      :title="myTestTitle"
+      :numtest="numTest"
+      :booleantest="booleanTest"
+      :objecttest="objectTest"
+    />
     <ImageCard />
   </div>
 </template>
@@ -13,9 +18,8 @@ export default {
     return {
       myTestTitle: '제 이름은 박상준입니다. VUE를 배우고 있지요.',
       numTest: 37,
-      // booleanTest: false,
-      // arrayTest: [7, 8, 9],
-      // objectTest: { name: 'Jaden', age: 6 },
+      booleanTest: false,
+      objectTest: { greeting: 'world' },
     };
   },
 };
