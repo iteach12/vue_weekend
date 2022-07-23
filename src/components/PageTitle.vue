@@ -6,6 +6,9 @@
     <h2 class="bg-yellow-300">{{ booleantest }} 동적으로 불린 넣기</h2>
     <h2 class="bg-teal-300">{{ objecttest }} 동적으로 객체 넣기</h2>
   </div>
+  <button type="button" @click="childFunc" ref="btn" class="bg-teal-500">
+    click
+  </button>
 </template>
 <script>
 export default {
@@ -25,6 +28,11 @@ export default {
       default: function () {
         return { greeting: 'hello' };
       },
+    },
+  },
+  methods: {
+    childFunc() {
+      console.log('부모 컴포넌트에서 직접 발생시킨 이벤트');
     },
   },
 };
